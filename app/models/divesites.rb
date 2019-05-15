@@ -1,0 +1,2 @@
+class Divesites < ApplicationRecord
+end
