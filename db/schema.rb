@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_142720) do
+ActiveRecord::Schema.define(version: 2019_05_30_202509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dives", force: :cascade do |t|
     t.string "date"
-    t.string "location"
     t.integer "dive_no"
     t.string "time_in"
     t.string "time_out"
@@ -34,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_142720) do
     t.integer "profile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "divesite_id"
   end
 
   create_table "divesites", force: :cascade do |t|
