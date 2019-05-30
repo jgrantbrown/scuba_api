@@ -3,6 +3,7 @@ class Api::DivesitesController < ApplicationController
     render json: Divesites.all
   end
 
+# CHECK IF EXISTS IN DB ?
   def create
     divesite = Divesites.new(divesite_params)
     if divesite.save
