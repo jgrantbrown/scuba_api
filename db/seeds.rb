@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+divesites = DiveSites.create([{
+    name: "The Lost Forest",
+    location: "neverland",
+    description: "Cool stuff to see",
+    img_url: null,
+  },
+  {
+    name: "The Emerald Kelp",
+    location: "neverland",
+    description: "Green stuff and Kelp",
+    img_url: null,
+    },
+  ])

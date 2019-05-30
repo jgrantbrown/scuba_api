@@ -10,16 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_150227) do
+ActiveRecord::Schema.define(version: 2019_05_30_142720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dives", force: :cascade do |t|
+    t.string "date"
+    t.string "location"
+    t.integer "dive_no"
+    t.string "time_in"
+    t.string "time_out"
+    t.string "exposures_protection"
+    t.string "visibility"
+    t.string "computer"
+    t.integer "PSI_start"
+    t.integer "PSI_end"
+    t.integer "weight_lbs"
+    t.integer "tempature_air"
+    t.integer "tempature_surface"
+    t.integer "tempature_bottom"
+    t.text "comments"
+    t.integer "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "divesites", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "description"
     t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "nickname"
+    t.string "user_img"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
