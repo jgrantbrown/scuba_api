@@ -5,7 +5,7 @@ ruby '2.3.0'
 
 # Added to possibly fic error running rails c
 gem 'rb-readline'
-
+gem 'jwt'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
